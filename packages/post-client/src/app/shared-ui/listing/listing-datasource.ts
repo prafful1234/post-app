@@ -42,7 +42,6 @@ export class ListingDataSource extends DataSource<ListingData> {
       .findModels(this.model, filter, pageIndex, pageSize)
       .pipe(
         map((res: ListResponse) => {
-          console.log(res);
           this.data = res.docs;
           this.offset = res.offset;
           this.length = res.length;
@@ -58,6 +57,6 @@ export class ListingDataSource extends DataSource<ListingData> {
 export const ListingColumns = {
   // here have any route_name : ['column name 1', 'column name 2']
   // these will reflect in listing,
-  posts: ['id', 'userId','title'],
+  posts: ['id', 'userId', 'title'],
   default: ['uuid', 'name'],
 };

@@ -18,7 +18,7 @@
       <mat-table *ngIf="dataSource"  class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
 
         <ng-container *ngFor="let cell of displayedColumns" [matColumnDef]="cell">
-          <mat-header-cell *matHeaderCellDef [mat-sort-header]="cell"> {{cell}}</mat-header-cell>
+          <mat-header-cell *matHeaderCellDef > {{cell}}</mat-header-cell>
           <mat-cell *matCellDef="let row">{{row[cell]}}</mat-cell>
         </ng-container>
 

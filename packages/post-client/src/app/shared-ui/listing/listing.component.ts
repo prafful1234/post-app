@@ -41,11 +41,7 @@ export class ListingComponent {
   }
 
   getUpdate(event) {
-    this.dataSource.loadItems(
-      this.search,
-      event.pageIndex,
-      event.pageSize,
-    );
+    this.dataSource.loadItems(this.search, event.pageIndex, event.pageSize);
   }
 
   setFilter() {

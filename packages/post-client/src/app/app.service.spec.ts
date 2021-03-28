@@ -4,7 +4,6 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { AppService } from './app.service';
-import { HttpErrorHandler } from './common/services/http-error-handler/http-error-handler.service';
 
 describe('AppService', () => {
   let injector: TestBed;
@@ -14,15 +13,7 @@ describe('AppService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [
-        AppService,
-        {
-          provide: HttpErrorHandler,
-          useValue: {
-            createHandleError: (serviceName = '') => {},
-          } as Partial<HttpErrorHandler>,
-        },
-      ],
+      providers: [AppService],
     });
 
     injector = getTestBed();

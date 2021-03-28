@@ -7,11 +7,7 @@ import { AppService } from './app.service';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    SharedUIModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, SharedUIModule],
   providers: [AppService],
   bootstrap: [AppComponent],
 })

@@ -7,17 +7,9 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { SharedImportsModule } from '../shared-imports/shared-imports.module';
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    ListingComponent,
-    NavigationComponent,
-  ],
+  declarations: [HomeComponent, ListingComponent, NavigationComponent],
   imports: [SharedImportsModule, CommonModule],
   providers: [ListingService],
-  exports: [
-    HomeComponent,
-    ListingComponent,
-    NavigationComponent,
-  ],
+  exports: [HomeComponent, ListingComponent, NavigationComponent],
 })
 export class SharedUIModule {}
