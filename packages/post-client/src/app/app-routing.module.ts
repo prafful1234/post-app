@@ -9,7 +9,10 @@ const routes: Routes = [
     path: 'list/:model',
     component: ListingComponent,
   },
-
+  {
+    path: 'posts',
+    loadChildren: () => import('./post/post.module').then(m => m.PostModule)
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home' },
 ];

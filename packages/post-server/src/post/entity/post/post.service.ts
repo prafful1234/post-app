@@ -16,7 +16,6 @@ export class PostService {
         return post;
       }
     });
-    console.log(post);
     const length = post.length;
 
     return {
