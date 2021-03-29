@@ -1,5 +1,25 @@
-<div class='home-container'>
-  <p>
-    Cooming Soon
-  </p>
+
+
+<div class="home-container">
+  <form [formGroup]="postForm">
+    <mat-card>
+      
+      <div fxLayout="row" fxLayoutAlign="space-between none">
+        <mat-card-title>Find Post</mat-card-title>
+      </div>
+
+      <mat-card-content fxLayout="column">
+
+        <mat-form-field>
+          <input matInput formControlName="id" placeholder="Please enter ID">
+        </mat-form-field>
+        
+
+        <mat-card-actions>
+          <button (click)="searchPost()" [disabled]="postForm.invalid"  mat-flat-button color="primary">Search</button>
+        </mat-card-actions>
+
+      </mat-card-content>
+    </mat-card>
+  </form>
 </div>

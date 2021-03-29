@@ -3,7 +3,7 @@ import { NavigationComponent } from './navigation.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Component } from '@angular/core';
-import { MaterialModule } from 'src/app/shared-imports/material/material.module';
+import { MaterialModule } from '../../shared-imports/material/material.module';
 
 describe('NavigationComponent', () => {
   let component: NavigationComponent;
