@@ -1,11 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
 import { ListingColumns, ListingDataSource } from './listing-datasource';
 import { ListingService } from './listing.service';
 import { filter } from 'rxjs/operators';
 import { NavigationEnd, Router } from '@angular/router';
-import { LIST } from 'src/app/constants/storage';
+import { LIST } from '../../constants/storage';
 
 @Component({
   selector: 'app-listing',

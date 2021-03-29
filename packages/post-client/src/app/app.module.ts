@@ -8,7 +8,7 @@ import { PostModule } from './post/post.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, SharedUIModule,PostModule],
+  imports: [BrowserModule, AppRoutingModule, SharedUIModule, PostModule],
   providers: [AppService],
   bootstrap: [AppComponent],
 })
