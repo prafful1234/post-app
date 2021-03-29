@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-navigation',
@@ -13,17 +14,14 @@ export class NavigationComponent implements OnInit {
     .observe(Breakpoints.Handset)
     .pipe(map(result => result.matches));
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private readonly location: Location,
+  ) {}
 
   ngOnInit(): void {}
 
-  login() {}
-
-  logout() {}
-
-  setUserSession() {}
-
-  addModel() {
-    // TODO: make it better in UI/UX
+  back() {
+    this.location.back();
   }
 }

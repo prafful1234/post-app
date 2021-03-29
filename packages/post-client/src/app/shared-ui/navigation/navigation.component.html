@@ -7,7 +7,6 @@
     [disableClose]="!(isHandset$ | async)"
     [opened]="!(isHandset$ | async)">
     <mat-toolbar color="primary">Menu</mat-toolbar>
-
     <ng-container >
       <mat-accordion>
         <mat-expansion-panel [expanded]="true" class="mat-elevation-z0">
@@ -39,9 +38,13 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
+      <button mat-button (click)="back()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
       <div fxFlex="100"></div>
       <a target="_blank" href="/api-docs" style="color: white;">Check Backend API</a>
     </mat-toolbar>
+    
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
