@@ -50,7 +50,7 @@
     - `home component` is landing page where we a input field which accepts a ID and button to search the provided ID,
         - if ID not found it gives a message stating the same.
         - if ID found it will cache it on localstorage and redirect you to `Post Component`.
-    - `Post Component` this component is lazy loaded on rout `posts`, hence 
+    - `Post Component` this component is lazy loaded on rout `posts`, hence it will load once the user enter a valid ID or lands on page from listing UI. 
     - `Listing Component` this component shows a list of all posts on the system with pagination, and on clicking any post you can open it in `Post Component`
 - App passes `lint`, `format`, checks as well as `e2e` and `unit` tests.
 
